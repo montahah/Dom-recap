@@ -3,11 +3,158 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Plant Tracker</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+      * {
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+      }
+    </style>
   </head>
   <body>
-    <p>Hello Developers</p>
+    <!-- Header -->
+    <header>
+      <section class="container mx-auto m-5">
+        <div class="text-6xl font-bold text-green-500 mb-5">Plant Tracker</div>
+        <div class="text-white grid grid-cols-3 gap-4">
+          <div class="bg-slate-500 rounded-lg pl-10 py-3">
+            <h2 class="text-4xl">3</h2>
+            <p class="font-medium">Total</p>
+          </div>
+          <div class="bg-slate-500 rounded-lg pl-10 py-2">
+            <h2 class="text-4xl">0</h2>
+            <p class="font-medium">Active</p>
+          </div>
+          <div class="bg-slate-500 rounded-lg pl-10 py-2">
+            <h2 class="text-4xl">0</h2>
+            <p class="font-medium">Dead</p>
+          </div>
+        </div>
+      </section>
+    </header>
 
-    <script src="./script.js"></script>
+    <hr />
+    <!-- Main -->
+    <main class="container mx-auto mt-5">
+      <!-- Buttons -->
+      <div class="text-white font-medium flex gap-5">
+        <button
+          class="bg-black px-5 py-2 rounded cursor-pointer"
+          id="all-filter-btn">
+          All
+        </button>
+        <button
+          class="bg-gray-400 px-5 py-2 rounded cursor-pointer"
+          id="active-filter-btn">
+          Active
+        </button>
+        <button
+          class="bg-gray-400 px-5 py-2 rounded cursor-pointer"
+          id="dead-filter-btn">
+          Dead
+        </button>
+      </div>
+      <!-- All Cards -->
+      <section class="">
+        <!-- Card 1 -->
+        <div
+          class="flex justify-between border-2 border-gray-400 p-10 mt-5 rounded-lg shadow">
+          <div class="space-y-3">
+            <h2 class="text-3xl font-medium">Plant Name 1</h2>
+            <p>Latin Name</p>
+            <div class="flex gap-3">
+              <p class="px-3 py-1 rounded bg-gray-300">Bright Indicate</p>
+              <p class="px-3 py-1 rounded bg-gray-300">Week</p>
+            </div>
+            <p class="px-2 py-1 rounded bg-gray-300 text-center">
+              Not Applicable
+            </p>
+            <p class="font-medium text-gray-600">New leaf want to grow</p>
+            <div class="flex gap-4">
+              <button
+                class="font-bold text-green-500 border-2 border-gray-400 px-5 py-2 rounded cursor-pointer">
+                Active
+              </button>
+              <button
+                class="font-bold text-red-500 border-2 border-red-400 px-5 py-2 rounded cursor-pointer">
+                Dead
+              </button>
+            </div>
+          </div>
+          <div>
+            <button
+              class="bg-red-400 text-white px-5 py-2 rounded cursor-pointer">
+              Delete
+            </button>
+          </div>
+        </div>
+        <div
+          class="flex justify-between border-2 border-gray-400 p-10 mt-5 rounded-lg shadow">
+          <div class="space-y-3">
+            <h2 class="text-3xl font-medium">Plant Name 2</h2>
+            <p>Latin Name</p>
+            <div class="flex gap-3">
+              <p class="px-3 py-1 rounded bg-gray-300">Bright Indicate</p>
+              <p class="px-3 py-1 rounded bg-gray-300">Week</p>
+            </div>
+            <p class="px-2 py-1 rounded bg-gray-300 text-center">
+              Not Applicable
+            </p>
+            <p class="font-medium text-gray-600">New leaf want to grow</p>
+            <div class="flex gap-4">
+              <button
+                class="font-bold text-green-500 border-2 border-gray-400 px-5 py-2 rounded cursor-pointer">
+                Active
+              </button>
+              <button
+                class="font-bold text-red-500 border-2 border-red-400 px-5 py-2 rounded cursor-pointer">
+                Dead
+              </button>
+            </div>
+          </div>
+          <div>
+            <button
+              class="bg-red-400 text-white px-5 py-2 rounded cursor-pointer">
+              Delete
+            </button>
+          </div>
+        </div>
+        <div
+          class="flex justify-between border-2 border-gray-400 p-10 mt-5 rounded-lg shadow">
+          <div class="space-y-3">
+            <h2 class="text-3xl font-medium">Plant Name 3</h2>
+            <p>Latin Name</p>
+            <div class="flex gap-3">
+              <p class="px-3 py-1 rounded bg-gray-300">Bright Indicate</p>
+              <p class="px-3 py-1 rounded bg-gray-300">Week</p>
+            </div>
+            <p class="px-2 py-1 rounded bg-gray-300 text-center">
+              Not Applicable
+            </p>
+            <p class="font-medium text-gray-600">New leaf want to grow</p>
+            <div class="flex gap-4">
+              <button
+                class="font-bold text-green-500 border-2 border-gray-400 px-5 py-2 rounded cursor-pointer">
+                Active
+              </button>
+              <button
+                class="font-bold text-red-500 border-2 border-red-400 px-5 py-2 rounded cursor-pointer">
+                Dead
+              </button>
+            </div>
+          </div>
+          <div>
+            <button
+              class="bg-red-400 text-white px-5 py-2 rounded cursor-pointer">
+              Delete
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
