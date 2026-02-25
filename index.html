@@ -22,15 +22,15 @@
         <div class="text-6xl font-bold text-green-500 mb-5">Plant Tracker</div>
         <div class="text-white grid grid-cols-3 gap-4">
           <div class="bg-slate-500 rounded-lg pl-10 py-3">
-            <h2 class="text-4xl">3</h2>
+            <h2 id="total" class="text-4xl">0</h2>
             <p class="font-medium">Total</p>
           </div>
-          <div class="bg-slate-500 rounded-lg pl-10 py-2">
-            <h2 class="text-4xl">0</h2>
+          <div class="bg-green-400 rounded-lg pl-10 py-2">
+            <h2 id="active" class="text-4xl">0</h2>
             <p class="font-medium">Active</p>
           </div>
-          <div class="bg-slate-500 rounded-lg pl-10 py-2">
-            <h2 class="text-4xl">0</h2>
+          <div class="bg-red-400 rounded-lg pl-10 py-2">
+            <h2 id="dead" class="text-4xl">0</h2>
             <p class="font-medium">Dead</p>
           </div>
         </div>
@@ -39,27 +39,30 @@
 
     <hr />
     <!-- Main -->
-    <main class="container mx-auto mt-5">
+    <main id="main" class="container mx-auto mt-5">
       <!-- Buttons -->
       <div class="text-white font-medium flex gap-5">
         <button
+          onclick="toggleStyle('all-filter-btn')"
           class="bg-black px-5 py-2 rounded cursor-pointer"
           id="all-filter-btn">
           All
         </button>
         <button
+          onclick="toggleStyle('active-filter-btn')"
           class="bg-gray-400 px-5 py-2 rounded cursor-pointer"
           id="active-filter-btn">
           Active
         </button>
         <button
+          onclick="toggleStyle('dead-filter-btn')"
           class="bg-gray-400 px-5 py-2 rounded cursor-pointer"
           id="dead-filter-btn">
           Dead
         </button>
       </div>
       <!-- All Cards -->
-      <section class="">
+      <section id="all-cards" class="">
         <!-- Card 1 -->
         <div
           class="flex justify-between border-2 border-gray-400 p-10 mt-5 rounded-lg shadow">
@@ -92,6 +95,7 @@
             </button>
           </div>
         </div>
+        <!-- Card 2 -->
         <div
           class="flex justify-between border-2 border-gray-400 p-10 mt-5 rounded-lg shadow">
           <div class="space-y-3">
@@ -123,6 +127,7 @@
             </button>
           </div>
         </div>
+        <!-- Card 2 -->
         <div
           class="flex justify-between border-2 border-gray-400 p-10 mt-5 rounded-lg shadow">
           <div class="space-y-3">
@@ -156,5 +161,6 @@
         </div>
       </section>
     </main>
+    <script src="./script.js"></script>
   </body>
 </html>
